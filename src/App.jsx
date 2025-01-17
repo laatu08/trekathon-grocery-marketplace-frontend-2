@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import CustomerDashboard from './pages/CustomerDashboard';
 import VendorDashboard from './pages/VendorDashboard';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './pages/Login';
@@ -23,7 +23,7 @@ const App=()=>{
 
         <Route path="/customer" element={<CustomerDashboard></CustomerDashboard>}></Route>
         <Route path="/vendor" element={<VendorDashboard></VendorDashboard>}></Route>
-        <Route path="/admin" element={<AdminDashboard></AdminDashboard>}></Route>
+        <Route path="/admin/*" element={<AdminDashboard></AdminDashboard>}></Route>
 
         <Route path='/cart' element={<Cart></Cart>}></Route>
         <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
