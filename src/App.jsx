@@ -11,6 +11,7 @@ import Cart from './components/Cart';
 import CheckOut from './pages/CheckOut';
 import CustomerOrders from './components/CustomerOrders';
 import VendorOrders from './components/VendorOrders';
+import Notifications from './pages/Notification';
 
 const App=()=>{
   return (
@@ -30,6 +31,8 @@ const App=()=>{
 
         <Route path='/customer/orders' element={<CustomerOrders></CustomerOrders>}></Route>
         <Route path='/vendor/orders' element={<VendorOrders></VendorOrders>}></Route>
+
+        <Route path='/notify' element={<Notifications></Notifications>}></Route>
       </Routes>
 
       <Footer></Footer>

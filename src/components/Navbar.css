@@ -1,0 +1,19 @@
+.notifications {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    top: 100%;
+    right: 0;
+}
+
+.notifications:hover .notification-dropdown {
+    display: block;
+}

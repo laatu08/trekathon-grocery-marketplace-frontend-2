@@ -18,11 +18,13 @@ const Login = () => {
                 password,
             });
 
-            const {token}=response.data;
+            const {token,userId}=response.data;
 
             if(token){
                 // Save token in localstorage
                 localStorage.setItem('token',token);
+                localStorage.setItem('userId', userId);  // Store userId here
+
 
                 // Redirect to customer dashboard
                 navigate('/customer');
