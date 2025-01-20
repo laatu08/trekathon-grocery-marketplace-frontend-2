@@ -12,6 +12,7 @@ import CheckOut from './pages/CheckOut';
 import CustomerOrders from './components/CustomerOrders';
 import VendorOrders from './components/VendorOrders';
 import Notifications from './pages/Notification';
+import ProductManagement from './pages/ProductManagement';
 
 const App=()=>{
   return (
@@ -33,6 +34,9 @@ const App=()=>{
         <Route path='/vendor/orders' element={<VendorOrders></VendorOrders>}></Route>
 
         <Route path='/notify' element={<Notifications></Notifications>}></Route>
+
+        <Route path="/vendor/products/add" element={<ProductManagement />} />
+        <Route path="/vendor/products/edit/:productId" element={<ProductManagement />} />
       </Routes>
 
       <Footer></Footer>

@@ -1,70 +1,67 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const VendorDashboard = () => {
-    const [products,setProducts]=useState([]);
+    const [products, setProducts] = useState([]);
+    const [orders, setOrders] = useState([]);
 
-    useEffect(()=>{
-        const fetchProducts=async()=>{
-            try {
-                const token=localStorage.getItem('token');
+    useEffect(() => {
+        // Fetch vendor products
+        const fetchProducts = async () => {
+            const token = localStorage.getItem('token');
+            const response = await axios.get('http://localhost:5000/vendor/products', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            setProducts(response.data);
+        };
 
-                if(!token){
-                    setError('User not authenticated. Please log in.');
-                    return;
-                }
-
-                const response = await axios.get('http://localhost:5000/products/vendor',{
-                    headers:{
-                        authorization:`Bearer ${token}`,
-                    },
-                });
-                setProducts(response.data);
-            } catch (error) {
-                console.log('Error fetching vendor product: ',error);
-            }
-        }
+        // Fetch vendor orders
+        const fetchOrders = async () => {
+            const token = localStorage.getItem('token');
+            const response = await axios.get('http://localhost:5000/orders/vendor', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            setOrders(response.data);
+        };
 
         fetchProducts();
-    },[]);
+        fetchOrders();
+    }, []);
 
-    const updatePrice=async(id,newPrice)=>{
-        try {
-            const token=localStorage.getItem('token');
+    return (
+        <div>
+            <h2>Vendor Dashboard</h2>
+            <div>
+                <h3>Products</h3>
+                <Link to="/vendor/products/add">Add New Product</Link>
+                <ul>
+                    {products.map((product) => (
+                        <li key={product.id}>
+                            <h4>{product.name}</h4>
+                            <p>Price: ${product.price}</p>
+                            <p>Stock: {product.stock}</p>
+                            <Link to={`/vendor/products/edit/${product.id}`}>Edit</Link> |
+                            <button>Delete</button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
 
-            if(!token){
-                setError('User not authenticated. Please log in.');
-                return;
-            }
-            await axios.put(`http://localhost:5000/products/${id}`,{price:newPrice},{
-                headers:{
-                    authorization:`Bearer ${token}`,
-                },
-            });
-            alert('Price Updated Successfully');
-            // fetchProducts();
-            window.location.reload();
-        } catch (error) {
-            console.log('Error Updating Price: ',error);
-        }
-    }
-  return (
-    <div>
-      <h1>Vendor Dashboard</h1>
-
-      <div>
-        {
-            products.map((product)=>(
-                <div key={product.id} style={{border:'2px solid #ccc',padding:'10px',margin:'10px'}}>
-                    <h2>{product.name}</h2>
-                    <p>Price: Rs{product.price}</p>
-                    <button onClick={()=>{updatePrice(product.id,prompt('Enter new Price: '))}}>Update Price</button>
-                </div>
-            ))
-        }
-      </div>
-    </div>
-  )
-}
+            <div>
+                <h3>Orders</h3>
+                <ul>
+                    {orders.map((order) => (
+                        <li key={order.id}>
+                            <h4>Order ID: {order.id}</h4>
+                            <p>Total: ${order.total_amount}</p>
+                            <p>Status: {order.status}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+};
 
 export default VendorDashboard;
