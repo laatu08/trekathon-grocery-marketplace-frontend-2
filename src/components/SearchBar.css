@@ -1,0 +1,60 @@
+/* SearchBar.css */
+
+/* Container for Search Bar */
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and Select Fields */
+.search-bar input,
+.search-bar select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 180px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease-in-out;
+}
+
+/* Input and Select Hover/Focus */
+.search-bar input:focus,
+.search-bar select:focus {
+    border-color: #007bff;
+    outline: none;
+    /* box-sizing: ; */
+}
+
+/* Search Button */
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover */
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+        width: 100%;
+    }
+}

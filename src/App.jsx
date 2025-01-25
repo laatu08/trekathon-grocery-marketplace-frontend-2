@@ -1,18 +1,18 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import CustomerDashboard from './pages/CustomerDashboard';
+import Home from './pages/Home/Home';
+import CustomerDashboard from './pages/CustomerDashboard/CustomerDashboard';
 import VendorDashboard from './pages/VendorDashboard';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Login from './pages/Login';
+import Login from './pages/Login/Login';
 import Cart from './components/Cart';
-import CheckOut from './pages/CheckOut';
+import CheckOut from './pages/CheckOut/CheckOut';
 import CustomerOrders from './components/CustomerOrders';
 import VendorOrders from './components/VendorOrders';
-import Notifications from './pages/Notification';
-import ProductManagement from './pages/ProductManagement';
+import Notifications from './pages/Notification/Notification';
+import ProductManagement from './pages/ProductManagement/ProductManagement';
 
 const App=()=>{
   return (

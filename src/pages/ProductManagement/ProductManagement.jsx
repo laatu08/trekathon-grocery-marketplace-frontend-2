@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './ProductManagement.css'
+
 
 const ProductManagement = () => {
     const [product, setProduct] = useState({ name: '', price: '', image_url: '', stock: '', category: '' });
@@ -48,7 +50,7 @@ const ProductManagement = () => {
     };
 
     return (
-        <div>
+        <div className='product-management-container'>
             <h2>{productId ? 'Edit Product' : 'Add New Product'}</h2>
             <form onSubmit={handleSubmit}>
                 <label>

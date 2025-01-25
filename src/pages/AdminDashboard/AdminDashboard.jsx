@@ -3,6 +3,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import UserManagement from './UserManagement';
 import VendorManagement from './VendorManagement';
 import OrderAnalytics from './OrderAnalytics';
+import './AdminDashboard.css'
 
 const AdminDashboard = () => {
     return (
@@ -17,11 +18,14 @@ const AdminDashboard = () => {
             </nav>
 
             {/* Routes */}
-            <Routes>
-                <Route path="users" element={<UserManagement />} />
-                <Route path="vendors" element={<VendorManagement />} />
-                <Route path="analytics" element={<OrderAnalytics />} />
-            </Routes>
+            <div className='content'>
+                <Routes>
+                    <Route path="users" element={<UserManagement />} />
+                    <Route path="vendors" element={<VendorManagement />} />
+                    <Route path="analytics" element={<OrderAnalytics />} />
+                </Routes>
+            </div>
+            
         </div>
     );
 };

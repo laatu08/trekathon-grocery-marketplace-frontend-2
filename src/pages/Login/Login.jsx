@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import './Login.css'
 
 const Login = () => {
     const [email,setEmail]=useState('');
@@ -39,10 +40,10 @@ const Login = () => {
     }
 
   return (
-    <div style={{maxWidth:'400px',margin:'50px auto'}}>
+    <div className='login-container'>
       
       <h1>Login</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p className='error-message'>{error}</p>}
 
       <form onSubmit={handleLogin}>
         <div style={{marginBottom:'15px'}}>

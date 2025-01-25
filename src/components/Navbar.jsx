@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { io } from 'socket.io-client';
-// import './Navbar.css'
+import './Navbar.css'
 
 // const socket = io('http://localhost:5000'); // Backend URL
 
@@ -30,8 +30,11 @@ const Navbar = () => {
             <Link to="/vendor">Vendor Dashboard</Link>
             <Link to="/admin">Admin Dashboard</Link>
             <Link to="/cart">Cart</Link>
-            <Link to="/checkout">Checkout</Link>
+            {/* <Link to="/checkout">Checkout</Link> */}
             <Link to="/notify">Notification</Link>
+            <Link to="/customer/orders">Orders</Link>
+            <Link to="/vendor/orders">Sales</Link>
+            <Link to="/login">Login</Link>
 
             {/* <div className="notifications">
                 <span>Notifications ({notifications.length})</span>

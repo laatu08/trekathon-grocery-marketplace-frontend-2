@@ -1,0 +1,63 @@
+/* OrderAnalytics.css */
+
+/* Main Container */
+.order-analytics {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Title */
+.order-analytics h2 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Loading Indicator */
+.order-analytics p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Analytics Data */
+.order-analytics h3, .order-analytics h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-analytics ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-analytics ul li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.order-analytics ul li:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-analytics h2 {
+        font-size: 1.6rem;
+    }
+
+    .order-analytics h3, .order-analytics h4 {
+        font-size: 1.2rem;
+    }
+
+    .order-analytics ul li {
+        padding: 8px;
+    }
+}

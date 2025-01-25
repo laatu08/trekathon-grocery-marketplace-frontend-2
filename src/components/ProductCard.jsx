@@ -1,11 +1,12 @@
 import React from 'react'
 import { useCart } from '../context/CartContext'
+import './ProductCard.css'
 
 const ProductCard = ({product}) => {
     const {addToCart}=useCart();
 
   return (
-    <div key={product.id} style={{border:'2px solid #ccc',padding:'10px',margin:'10px'}}>
+    <div className='product-card' key={product.id} style={{border:'2px solid #ccc',padding:'10px',margin:'10px'}}>
         <h2>{product.name}</h2>
         <p>Price: Rs{product.price}</p>
         <p>Stock: {product.stock}</p>

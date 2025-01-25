@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
-import SearchBar from '../components/SearchBar';
-import ProductCard from '../components/ProductCard';
+import SearchBar from '../../components/SearchBar';
+import ProductCard from '../../components/ProductCard';
+import './CustomerDashboard.css'
 
 const CustomerDashboard = () => {
     const [products,setProducts]=useState([]);
@@ -33,10 +34,10 @@ const CustomerDashboard = () => {
 
 
   return (
-    <div>
+    <div className='customer-dashboard'>
         <h1>Customer Dashboard</h1>
         <SearchBar setProducts={setProducts}></SearchBar>
-        <div>
+        <div className='product-grid'>
             {
                 products.map((product)=>(
                     <ProductCard key={product.id} product={product}></ProductCard>

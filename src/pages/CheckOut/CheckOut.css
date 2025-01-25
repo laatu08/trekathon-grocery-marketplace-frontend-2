@@ -1,0 +1,97 @@
+/* Checkout.css */
+
+/* Main Container */
+.checkout {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Title */
+.checkout h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Cart Items */
+.checkout div {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Item Name */
+.checkout h4 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* Item Details */
+.checkout p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 4px 0;
+}
+
+/* Total Amount */
+.checkout h3 {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Error Message */
+.checkout p[style] {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* PayPal Button Container */
+#paypal-button-container {
+    height: 400px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout {
+        padding: 15px;
+    }
+
+    .checkout h2 {
+        font-size: 1.8rem;
+    }
+
+    .checkout h4 {
+        font-size: 1.3rem;
+    }
+
+    .checkout p {
+        font-size: 1rem;
+    }
+
+    .checkout h3 {
+        font-size: 1.4rem;
+    }
+
+    /* PayPal Button */
+    #paypal-button-container {
+        margin-top: 20px;
+    }
+}

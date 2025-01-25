@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useCart } from '../context/CartContext';
+import { useCart } from '../../context/CartContext';
 import axios from 'axios';
+import './CheckOut.css'
 
 const CheckOut = () => {
     const { cart } = useCart();
@@ -70,7 +71,8 @@ const CheckOut = () => {
     }, [cart, totalAmount]);
 
     return (
-        <div>
+        <>
+        <div className='checkout'>
             <h2>Checkout</h2>
             {cart.map((item) => (
                 <div key={item.id}>
@@ -83,8 +85,11 @@ const CheckOut = () => {
 
             {error && <p style={{ color: 'red' }}>{error}</p>}
 
+        </div>
+        <div className='payment'>
             <div id="paypal-button-container"></div>
         </div>
+</>
     );
 };
 

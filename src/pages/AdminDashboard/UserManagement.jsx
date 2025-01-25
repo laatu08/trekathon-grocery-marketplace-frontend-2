@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './UserManagement.css'
 
 const UserManagement = () => {
     const [users, setUsers] = useState([]);
@@ -36,7 +37,7 @@ const UserManagement = () => {
     };
 
     return (
-        <div>
+        <div className='user-management'>
             <h2>User Management</h2>
             {loading ? <p>Loading...</p> : (
                 <table>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './VendorOrders.css'
 
 const VendorOrders = () => {
     const [orders, setOrders] = useState([]);
@@ -33,10 +34,10 @@ const VendorOrders = () => {
     }
 
     return (
-        <div>
+        <div className='orders-container'>
             <h2>Orders for Your Products</h2>
             {orders.length === 0 ? (
-                <p>No orders found.</p>
+                <p className='no-orders'>No orders found.</p>
             ) : (
                 orders.map((order) => (
                     <div key={order.id} className="order">

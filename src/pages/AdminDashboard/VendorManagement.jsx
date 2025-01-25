@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './VendorManagement.css'
 
 const VendorManagement = () => {
     const [vendors, setVendors] = useState([]);
@@ -41,7 +42,7 @@ const VendorManagement = () => {
     };
 
     return (
-        <div>
+        <div className='vendor-management'>
             <h2>Vendor Management</h2>
             {loading ? <p>Loading...</p> : (
                 <table>
@@ -61,11 +62,11 @@ const VendorManagement = () => {
                                 <td>{vendor.is_suspended ? 'Suspended' : 'Active'}</td>
                                 <td>
                                     {!vendor.is_approved && 
-                                        <button onClick={() => handleAction(vendor.id, 'approve')}>Approve</button>}
+                                        <button className='approve' onClick={() => handleAction(vendor.id, 'approve')}>Approve</button>}
                                     {vendor.is_approved && !vendor.is_suspended && 
-                                        <button onClick={() => handleAction(vendor.id, 'suspend')}>Suspend</button>}
+                                        <button className='suspend' onClick={() => handleAction(vendor.id, 'suspend')}>Suspend</button>}
                                     {vendor.is_suspended && 
-                                        <button onClick={() => handleAction(vendor.id, 'reactivate')}>Reactivate</button>}
+                                        <button className='reactivate' onClick={() => handleAction(vendor.id, 'reactivate')}>Reactivate</button>}
                                 </td>
                             </tr>
                         ))}

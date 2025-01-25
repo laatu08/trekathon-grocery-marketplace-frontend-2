@@ -1,0 +1,78 @@
+/* Notifications Container */
+.notifications-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Notifications List */
+.notifications-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.notifications-container li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 5px solid #4CAF50;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.notifications-container li:hover {
+    background-color: #e2f7e2;
+    cursor: pointer;
+}
+
+/* Styling for Empty Notifications */
+.empty-notifications {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Notification Importance Levels */
+.notifications-container li.important {
+    border-left-color: #ff5722; /* Red for important */
+    font-weight: bold;
+}
+
+.notifications-container li.info {
+    border-left-color: #2196f3; /* Blue for info */
+}
+
+.notifications-container li.success {
+    border-left-color: #4CAF50; /* Green for success */
+}
+
+.notifications-container li.warning {
+    border-left-color: #ff9800; /* Orange for warning */
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .notifications-container {
+        padding: 15px;
+    }
+
+    .notifications-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .notifications-container li {
+        font-size: 0.9rem;
+    }
+}

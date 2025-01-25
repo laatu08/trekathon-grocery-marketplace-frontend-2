@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import axios from 'axios';
+import './SearchBar.css'
 
 const SearchBar = ({setProducts}) => {
     const [query,setQuery]=useState('');
@@ -33,7 +34,7 @@ const SearchBar = ({setProducts}) => {
     };
 
   return (
-    <div>
+    <div className='search-bar'>
       <input type="text" value={query} onChange={(e)=>{setQuery(e.target.value)}} placeholder='Search Products'/>
 
       <select value={category} onChange={(e)=>{setCategory(e.target.value)}} id="">

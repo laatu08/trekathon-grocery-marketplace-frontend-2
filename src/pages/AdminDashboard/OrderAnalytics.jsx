@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './OrderAnalytics.css'
 
 const OrderAnalytics = () => {
     const [analytics, setAnalytics] = useState({
@@ -39,7 +40,7 @@ const OrderAnalytics = () => {
     }, []);
 
     return (
-        <div>
+        <div className='order-analytics'>
             <h2>Order Analytics</h2>
             {loading ? <p>Loading...</p> : (
                 <div>

@@ -1,6 +1,7 @@
 import react,{useEffect} from 'react';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import './Cart.css'
 
 const Cart = () => {
     const {cart,fetchCart,updateCartItem,deleteCartItem}=useCart();
@@ -31,10 +32,10 @@ const Cart = () => {
     };
 
   return (
-    <div>
+    <div className='cart-container'>
       <h2>Your Cart</h2>
       {cart.map((item)=>(
-        <div key={item.id} style={{ border: '1px solid #ccc', padding: '10px', margin: '10px 0' }}>
+        <div key={item.id} className='cart-item'>
             <h3>{item.name}</h3>
             <p>Price: Rs{item.price}</p>
             <p>Quantity:
@@ -45,7 +46,7 @@ const Cart = () => {
             <button onClick={()=>handleDeleteItem(item.id)}>Remove Item</button>
         </div>
       ))}
-      <button onClick={handleCheckout}>Proceed to Checkout</button>
+      <button className='checkout-button' onClick={handleCheckout}>Proceed to Checkout</button>
     </div>
   )
 }

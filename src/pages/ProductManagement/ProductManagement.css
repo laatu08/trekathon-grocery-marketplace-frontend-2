@@ -1,0 +1,82 @@
+/* Product Management Container */
+.product-management-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.product-management-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.product-management-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Label */
+.product-management-container label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Input Fields */
+.product-management-container input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea Styling */
+.product-management-container textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Submit Button */
+.product-management-container button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-management-container button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .product-management-container {
+        padding: 20px;
+    }
+
+    .product-management-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-management-container button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .product-management-container input, textarea {
+        font-size: 0.9rem;
+    }
+}

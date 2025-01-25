@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import './VendorDashBoard.css'
 
 const VendorDashboard = () => {
     const [products, setProducts] = useState([]);
@@ -30,12 +31,12 @@ const VendorDashboard = () => {
     }, []);
 
     return (
-        <div>
+        <div className='vendor-dashboard-container'>
             <h2>Vendor Dashboard</h2>
             <div>
                 <h3>Products</h3>
                 <Link to="/vendor/products/add">Add New Product</Link>
-                <ul>
+                <ul className='order-list'>
                     {products.map((product) => (
                         <li key={product.id}>
                             <h4>{product.name}</h4>

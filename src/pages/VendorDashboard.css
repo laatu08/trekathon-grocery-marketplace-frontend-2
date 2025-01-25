@@ -1,0 +1,124 @@
+/* Vendor Dashboard Container */
+.vendor-dashboard-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.vendor-dashboard-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Subheading */
+.vendor-dashboard-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Link Styling */
+.vendor-dashboard-container a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.vendor-dashboard-container a:hover {
+    text-decoration: underline;
+}
+
+/* Product List */
+.vendor-dashboard-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vendor-dashboard-container ul li {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.vendor-dashboard-container ul li h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.vendor-dashboard-container ul li p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Order List */
+.vendor-dashboard-container ul.order-list {
+    list-style: none;
+    padding: 0;
+}
+
+.vendor-dashboard-container ul.order-list li {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.vendor-dashboard-container ul.order-list li h4 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.vendor-dashboard-container ul.order-list li p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Button Styling */
+.vendor-dashboard-container button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vendor-dashboard-container button:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vendor-dashboard-container {
+        padding: 20px;
+    }
+
+    .vendor-dashboard-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .vendor-dashboard-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .vendor-dashboard-container ul li {
+        padding: 10px;
+    }
+
+    .vendor-dashboard-container button {
+        padding: 8px 14px;
+    }
+}
